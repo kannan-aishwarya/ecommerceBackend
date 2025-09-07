@@ -1,16 +1,7 @@
 package com.example.ecommerceBackend.entity;
 
-
-public class AddUserRequest {
+public class FetchCart {
     private String email;
-
-    public AddUserRequest(){
-
-    }
-
-    public AddUserRequest(String email) {
-        this.email = email;
-    }
 
     public String getEmail() {
         return email;

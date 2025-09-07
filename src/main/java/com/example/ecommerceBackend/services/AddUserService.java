@@ -11,8 +11,8 @@ public class AddUserService {
     @Autowired
     private UserRepository userRepository;
 
-    public void addUser(String name, String phoneNumber, String addressLine1, String addressLine2) {
-        User user = new User(name,phoneNumber,addressLine1,addressLine2);
+    public void addUser(String email) {
+        User user = new User(email);
         userRepository.save(user);
     }
 }

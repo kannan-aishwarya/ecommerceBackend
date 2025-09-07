@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
     @Autowired
     private UserRepository userRepository;
@@ -20,8 +21,8 @@ public class UserController {
         return user;
     }
 
-    @PutMapping("/users/signup")
+    @PostMapping("/users/signup")
     public void createUser(@RequestBody AddUserRequest request) {
-        addUserService.addUser(request.getName(),request.getPhoneNumber(),request.getAddressLine1(),request.getAddressLine2());
+        addUserService.addUser(request.getEmail());
     }
 }

@@ -12,20 +12,14 @@ public class User {
     @GeneratedValue
     private int id;
 
-    private String name;
-    private String phoneNumber;
-    private String addressLine1;
-    private String addressLine2;
+    private String email;
 
     public User(){
 
     }
 
-    public User(String name, String phoneNumber, String addressLine1, String addressLine2) {
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.addressLine1 = addressLine1;
-        this.addressLine2 = addressLine2;
+    public User(String email) {
+        this.email = email;
     }
 
     public int getId() {
@@ -36,36 +30,11 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getEmail() {
+        return email;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-
-    public String getAddressLine1() {
-        return addressLine1;
-    }
-
-    public void setAddressLine1(String addressLine1) {
-        this.addressLine1 = addressLine1;
-    }
-
-    public String getAddressLine2() {
-        return addressLine2;
-    }
-
-    public void setAddressLine2(String addressLine2) {
-        this.addressLine2 = addressLine2;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

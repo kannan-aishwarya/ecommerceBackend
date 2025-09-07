@@ -1,7 +1,9 @@
 package com.example.ecommerceBackend.entity;
 
 public class AddCartItemRequest {
+    private String email;
     private int productId;
+
     private int quantity;
 
     public int getProductId() {
@@ -18,5 +20,13 @@ public class AddCartItemRequest {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
