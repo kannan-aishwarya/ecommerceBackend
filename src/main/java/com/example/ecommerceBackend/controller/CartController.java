@@ -44,4 +44,10 @@ public class CartController {
         return ResponseEntity.ok(cart);
     }
 
+    @DeleteMapping("/clear/{email}")
+    public ResponseEntity<String> clearCart(@PathVariable String email) {
+        cartService.clearCart(email);
+        return ResponseEntity.ok("Cart cleared successfully");
+    }
+
 }

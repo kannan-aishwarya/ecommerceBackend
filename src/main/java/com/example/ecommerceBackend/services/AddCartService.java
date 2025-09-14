@@ -63,4 +63,11 @@ public class AddCartService {
         CartItem cartItem = cartItemRepository.findById(cartItemId).get();
         cartItemRepository.delete(cartItem);
     }
+
+    public void clearCart(String email) {
+        User user = userRepository.findByEmailIgnoreCase(email).get();
+        Cart cart =  cartRepository.findByUser(user).get();
+        cart.getCartItems().clear();
+        cartRepository.save(cart);
+    }
 }
